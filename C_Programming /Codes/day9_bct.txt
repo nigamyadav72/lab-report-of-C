@@ -1,0 +1,105 @@
+//whether a year is leap or not
+//leap year occurs mostly every 4 years
+//but every 100 years we skip a leap year unless the year is divisible by 400
+//1996 is a leap year because it is divisible by 4
+//1700,1800 is not a leap year because it is not divisible by 400
+//1600,2000 is a leap year because it is divisible by 400
+#include<stdio.h>
+int main()
+{
+    int year;
+    printf("Enter a year:\n");
+    scanf("%d",&year);
+    if(year%4==0)
+    {
+        if(year%100==0)
+        {
+            if(year%400==0)
+            {
+                printf("%d is a leap year",year);
+            }
+            else
+            {
+                printf("%d is not a leap year",year);
+            }
+        }
+        else
+        {
+            printf("%d is a leap year",year);
+        }
+    }
+    else
+    {
+       printf("%d is not a leap year",year);
+    }
+    return 0;
+}
+
+
+//Switch Statement
+//A Simple Calculator
+#include<stdio.h>
+int main()
+{
+    float a,b,ans;
+    char op;
+    printf("Enter the value of a and b\n");
+    scanf("%f%f",&a,&b);
+    printf("Enter + for Addition\nEnter - for Subtraction\nEnter * for Multiplication\nEnter / for Division\n");
+    scanf(" %c",&op);
+    switch(op)
+    {
+        case '+': ans=a+b;
+                  printf("The sum of %f and %f is %f",a,b,ans);
+                  break;
+        case '-': ans=a-b;
+                  printf("The difference of %f and %f is %f",a,b,ans);
+                  break;
+        case '*': ans=a*b;
+                  printf("The product of %f and %f is %f",a,b,ans);
+                 break;
+        case '/': ans=a/b;
+                  printf("The quotient of %f and %f is %f",a,b,ans);
+                 break;
+        default:
+                  printf("Invalid Input");
+
+   }
+    return 0;
+}
+
+
+//for loop
+//to print 1....n
+#include<stdio.h>
+int main()
+{
+    int number,i;
+    printf("Enter a number\n");
+    scanf("%d",&number);
+    printf("The numbers are\n");
+    for(i=1;i<=number;i++)
+    {
+        printf("%d\n",i);
+    }
+    return 0;
+}
+
+
+
+//for loop
+//to print n....1
+#include<stdio.h>
+int main()
+{
+    int number,i;
+    printf("Enter a number\n");
+    scanf("%d",&number);
+    printf("The numbers are\n");
+    for(i=number;i>=1;i--)
+    {
+        printf("%d\n",i);
+    }
+    return 0;
+}
+

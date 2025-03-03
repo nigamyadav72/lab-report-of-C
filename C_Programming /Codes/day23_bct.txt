@@ -1,0 +1,94 @@
+//Character Input and output in a file
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char ch,choice;
+    FILE *fptr;
+    fptr=fopen("D:\\bct\\file1.txt","w");   //opening a file
+    if(fptr==NULL)
+    {
+        printf("File Cannot be Opened");
+        exit(0);
+    }
+    do
+    {
+        printf("Enter a character\n");
+        scanf(" %c",&ch);
+        fputc(ch,fptr);               //put a character in a file
+        printf("Press y to continue and n to end");
+        scanf(" %c",&choice);
+    }while(choice=='y');
+    fclose(fptr);           //closing a file
+    return 0;
+}
+
+
+//Character Input and output in a file
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char ch;
+    FILE *fptr;
+    fptr=fopen("D:\\bct\\file2.txt","r");   //opening a file
+    if(fptr==NULL)
+    {
+        printf("File Cannot be Opened");
+        exit(0);
+    }
+    while(1)
+    {
+        ch=fgetc(fptr);
+        if(ch==EOF)
+            break;
+        printf("%c",ch);
+    }
+    fclose(fptr);           //closing a file
+    return 0;
+}
+
+
+
+//String Input and output in a file
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char str[30];
+    FILE *fptr;
+    fptr=fopen("D:\\bct\\file2.txt","w");   //opening a file
+    if(fptr==NULL)
+    {
+        printf("File Cannot be Opened");
+        exit(0);
+    }
+    printf("Enter a String");
+    gets(str);
+    fputs(str,fptr);
+    fclose(fptr);           //closing a file
+    return 0;
+}
+
+
+
+//String Input and output in a file
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    char str[30];
+    FILE *fptr;
+    fptr=fopen("D:\\bct\\file2.txt","r");   //opening a file
+    if(fptr==NULL)
+    {
+        printf("File Cannot be Opened");
+        exit(0);
+    }
+    fgets(str,30,fptr);
+    printf("%s",str);
+    fclose(fptr);           //closing a file
+    return 0;
+}
+
+

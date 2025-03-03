@@ -1,0 +1,66 @@
+//type Casting
+#include<stdio.h>
+int main()
+{
+    int a=5,b=2;
+    float c;
+    c=(float)a/b;   //type casting
+    printf("C=%f",c);
+    return 0;
+}
+
+//unformatted input output
+//Single character input output
+#include<stdio.h>
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    ch=getchar();
+
+    putchar(ch);
+
+    return 0;
+}
+
+
+//unformatted input output
+//Single character input and output
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    ch=getche();                 //e is for echo
+    printf("The character is:");
+    putchar(ch);
+    putchar('.');
+    return 0;
+}
+
+
+//unformatted input output
+//Single character input and output
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    char ch;
+    printf("Enter a character:");
+    ch=getche();                 //e is for echo
+    printf("The character is:");
+    putchar(ch);
+    putchar('.');
+    return 0;
+}
+
+
+//formatted input output
+#include<stdio.h>
+int main()
+{
+    int a=10;
+    printf("|%d|",a);
+    return 0;
+}

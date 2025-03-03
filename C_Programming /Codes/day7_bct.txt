@@ -1,0 +1,60 @@
+#include<stdio.h>
+int main()
+{
+    float total,discount;
+    printf("Enter the total amount of the customer\n");
+    scanf("%f",&total);
+    if(total>=2500.0)
+    {
+        discount=0.1*total;
+        printf("Congratulations!! You have received Rs. %.2f discount\n",discount);
+        total=total-discount;
+    }
+    printf("Please, Pay Rs. %.2f",total);
+    return 0;
+}
+
+
+//Even or odd
+#include<stdio.h>
+int main()
+{
+    int number;
+    printf("Enter a number:\n");
+    scanf("%d",&number);
+    if(number%2==0)
+    {
+        printf("%d is even",number);
+    }
+    else
+    {
+        printf("%d is odd",number);
+    }
+    return 0;
+}
+
+
+//Area of Triangle
+//a,b,c
+//s=(a+b+c)/2
+//Area=squareroot(s*(s-a)*(s-b)*(s-c))
+//(a+b)>c and (b+c)>a and (a+c)>b
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    float a,b,c,s,area;
+    printf("Enter the sides of triangle\n");
+    scanf("%f%f%f",&a,&b,&c);
+    if((a+b)>c&&(b+c)>a&&(a+c)>b)    //&& logical and
+    {
+        s=(a+b+c)/2;
+        area=sqrt(s*(s-a)*(s-b)*(s-c));
+        printf("The area is %f",area);
+    }
+    else
+    {
+       printf("Triangle Cannot be Formed");
+    }
+    return 0;
+}

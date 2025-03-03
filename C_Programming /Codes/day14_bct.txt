@@ -1,0 +1,109 @@
+//Static variable
+#include<stdio.h>
+void counter()
+{
+    static int count;                  //defining static variable
+    count++;
+    printf("Calling counter %d time\n",count);
+}
+int main()
+{
+    counter();
+    counter();
+    counter();
+    counter();
+    return 0;
+}
+
+
+//factorial of a number
+#include<stdio.h>
+int main()
+{
+    int i,n,fact=1;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    for(i=1;i<=n;i++)
+    {
+        fact=fact*i;
+    }
+    printf("%d! = %d",n,fact);
+    return 0;
+}
+
+
+//factorial of a number
+#include<stdio.h>
+long factorial(int j)
+{
+    int i;
+    long fact=1;
+    for(i=1;i<=j;i++)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+int main()
+{
+    int n;
+    long fact;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    fact=factorial(n);
+    printf("%d! = %ld",n,fact);
+    return 0;
+}
+
+
+
+//factorial using recursion
+#include<stdio.h>
+long factorial(int n)
+{
+    if(n==0)
+        return 1;
+    else
+        return (n*factorial(n-1));
+}
+int main()
+{
+    int n;
+    long fact;
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    fact=factorial(n);
+    printf("%d! = %ld",n,fact);
+    return 0;
+}
+
+
+//sine series
+#include<stdio.h>
+#include<math.h>
+long factorial(int j)
+{
+    int i;
+    long fact=1;
+    for(i=1;i<=j;i++)
+    {
+        fact=fact*i;
+    }
+    return fact;
+}
+int main()
+{
+    int i,sign=-1,n;
+    float x,x1,sum=0;
+    printf("Enter the value of x(in degree) and n");
+    scanf("%f%d",&x,&n);
+    x1=x;
+    x=x*(3.1415/180);
+    for(i=1;i<=n;i+=2)
+    {
+        sign= -1*sign;
+        sum=sum + sign*pow(x,i)/factorial(i);
+    }
+    printf("sin(%.0f)=%.2f",x1,sum);
+    return 0;
+}

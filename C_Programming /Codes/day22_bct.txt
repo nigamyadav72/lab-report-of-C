@@ -1,0 +1,109 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<conio.h>
+#define size 100
+int data;
+struct employee
+{
+    int empno;
+    char name[20];
+    float salary;
+};
+void input(struct employee e[])
+{
+    printf("Enter the empno, name and salary of the employee\n");
+    scanf("%d%s%f",&e[data].empno,e[data].name,&e[data].salary);
+    data++;
+}
+void display(struct employee e[])
+{
+    int i;
+    if(data==0)
+        printf("No records Found\n");
+    else
+    {
+        printf("The records are\n");
+        for(i=0;i<data;i++)
+        {
+            printf("%d\t%s\t%f\n",e[i].empno,e[i].name,e[i].salary);
+        }
+    }
+}
+void update_salary(struct employee e[])
+{
+    int empnumb,i;
+    printf("Enter the Employee number whose salary is to be increased\n");
+    scanf("%d",&empnumb);
+    for(i=0;i<data;i++)
+    {
+        if(e[i].empno==empnumb)
+        {
+            printf("%s Salary is Increased",e[i].name);
+            e[i].salary=e[i].salary+ 0.1*e[i].salary;
+            break;
+        }
+    }
+    if(i==data)
+    {
+        printf("Record not found\n");
+    }
+}
+int main()
+{
+    struct employee e[size];
+    int choice;
+    while(1)                     //infinite loop
+    {
+        system("cls");           //clears screen
+        printf("Employee Management System\n");
+        printf("1. Add Employee\n");
+        printf("2. Display Employee\n");
+        printf("3. Update Employee's Salary\n");
+        printf("4. Exit\n");
+        printf("Enter your Choice\n");
+        scanf("%d",&choice);
+        switch(choice)
+        {
+            case 1: input(e);
+                    break;
+            case 2: display(e);
+                    getch();
+                    break;
+            case 3: update_salary(e);
+                    getch();
+                    break;
+            case 4: exit(0);
+            default: printf("Invalid Input\n");
+        }
+    }
+    return 0;
+}
+
+
+
+
+#include<stdio.h>
+struct distance
+{
+    int feet,inch;
+};
+int main()
+{
+    struct distance d1,d2,sum;
+    printf("Enter First Distance(feet,inch)\n");
+    scanf("%d%d",&d1.feet,&d1.inch);
+    printf("Enter Second Distance(feet,inch)\n");
+    scanf("%d%d",&d2.feet,&d2.inch);
+
+    sum.feet=d1.feet+d2.feet;
+    sum.inch=d1.inch+d2.inch;
+
+    if(sum.inch>=12)
+    {
+        sum.feet++;
+        sum.inch=sum.inch-12;
+    }
+
+    printf("The sum is %d' %d'' ",sum.feet,sum.inch);
+    return 0;
+}

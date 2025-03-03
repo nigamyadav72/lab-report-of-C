@@ -1,0 +1,63 @@
+//formatted output
+//for printing integers and float values
+#include<stdio.h>
+int main()
+{
+    int a=105;
+    float b=12.51;
+    printf("The value of a=|%d|\n",a);
+    printf("The value of a=|%5d|\n",a);
+    printf("The value of a=|%-5d|\n",a);
+    printf("The value of a=|%05d|\n",a);
+    printf("The value of a=|%015d|\n",a);
+    printf("The value of b=|%f|\n",b);
+    printf("The value of b=|%10f|\n",b);
+    printf("The value of b=|%15.2f|\n",b);
+    printf("The value of b=|%-15.2f|\n",b);
+    printf("The value of b=|%015.2f|\n",b);
+    return 0;
+}
+
+
+//formatted output
+//for printing string
+#include<stdio.h>
+int main()
+{
+    char str[]="I Love Nepal.";  //initializing string str is variable name
+    printf("|%s|\n",str);
+    printf("|%20s|\n",str);
+    printf("|%-20s|\n",str);
+    printf("|%-20.1s|\n",str);
+    printf("|%-20.3s|\n",str);
+    printf("|%-20.4s|\n",str);
+    printf("|%-20.5s|\n",str);
+    return 0;
+}
+
+
+
+//formatted input
+//to input integer   (%wd)
+#include<stdio.h>
+int main()
+{
+    int a;
+    printf("Enter the value of a:");
+    scanf("%3d",&a);       //formatted input
+    printf("a=%d",a);
+    return 0;
+}
+
+
+//formatted input
+//string
+#include<stdio.h>
+int main()
+{
+    char name[100];
+    printf("Enter your name:");
+    scanf("%[^\n]s",name);
+    printf("Hello!!%s",name);
+    return 0;
+}

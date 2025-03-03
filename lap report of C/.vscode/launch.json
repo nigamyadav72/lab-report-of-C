@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": true,
+      "externalConsole": false,
+      "cwd": "/Users/nigam/Downloads/lap report of C",
+      "program": "/Users/nigam/Downloads/lap report of C/build/Debug/outDebug",
+      "MIMode": "gdb"
+    }
+  ]
+}

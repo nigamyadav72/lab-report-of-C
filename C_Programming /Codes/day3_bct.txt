@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<math.h>
+#define pi 3.1415   //defining Symbolic Constant
+int main()
+{
+    float radius,area;
+    printf("Enter the value of radius");
+    scanf("%f",&radius);
+    //area=pi*radius*radius;
+    area=pi*pow(radius,2);
+    printf("Area=%f",area);
+    return 0;
+}
+
+
+#include<stdio.h>
+int main()
+{
+    int a,b=5;
+    a=++b;
+    printf("a=%d\nb=%d",a,b);
+    return 0;
+}
+

@@ -1,0 +1,10 @@
+#include<stdio.h>
+int main()
+{
+    int a,b,c;          //Declare integer variables a,b,c
+    a=5;                //assign 5 to a
+    b=5;                //assign 5 to b
+    c=a+b;              // add a,b and store in c
+    printf("The Sum of %d and %d is %d",a,b,c); // display the value of c
+    return 0;
+}

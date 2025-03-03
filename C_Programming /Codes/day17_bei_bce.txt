@@ -1,0 +1,130 @@
+//Matrix multiplication using 2D Array
+#include<stdio.h>
+int main()
+{
+    int a[10][10],b[10][10],c[10][10],i,j,k,m,n,p,q;
+    printf("Enter the order of First matrix:");
+    scanf("%d%d",&m,&n);
+    printf("Enter the order of Second matrix:");
+    scanf("%d%d",&p,&q);
+    if(n!=p)
+    {
+        printf("Matrix multiplication not possible\n");
+    }
+    else
+    {
+        printf("Enter the first matrix:\n");
+        for(i=0;i<m;i++)
+        {
+            for(j=0;j<n;j++)
+            {
+                scanf("%d",&a[i][j]);
+            }
+        }
+        printf("Enter the Second matrix:\n");
+        for(i=0;i<p;i++)
+        {
+            for(j=0;j<q;j++)
+            {
+                scanf("%d",&b[i][j]);
+            }
+        }
+        for(i=0;i<m;i++)
+        {
+            for(j=0;j<q;j++)
+            {
+                c[i][j]=0;
+                for(k=0;k<n;k++)
+                {
+                    c[i][j]=c[i][j]+a[i][k]*b[k][j];
+                }
+            }
+        }
+        printf("The product is:\n");
+        for(i=0;i<m;i++)
+        {
+            for(j=0;j<q;j++)
+            {
+                printf("%d\t",c[i][j]);
+            }
+            printf("\n");
+        }
+    }
+    return 0;
+}
+
+
+//initializing string
+#include<stdio.h>
+int main()
+{
+    char fname[]="Ram";
+    char lname[]={'T','h','a','p','a','\0'};
+
+    printf("%s %s",fname,lname);
+    return 0;
+}
+
+
+//string function
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str1[]="Ram",str2[]="Thapa",str3[20];
+    int len1,len2;
+    len1=strlen(str1);    //calculates the length of string
+    len2=strlen(str2);
+    printf("Length of str1=%d\tLength of str2=%d\n",len1,len2);
+
+    strcpy(str3,str1);
+    printf("Str3= %s\n",str3);
+
+    strcat(str3," ");
+    strcat(str3,str2);
+    printf("After string concatination\n");
+    printf("str3= %s\n",str3);
+
+    strrev(str3);
+    printf("Reverse of str3=%s\n",str3);
+
+    if(strcmp(str1,"Ram")==0)
+        printf("Same String\n");
+    else
+        printf("Not same string\n");
+
+    return 0;
+}
+
+
+
+//string length without using string functions
+#include<stdio.h>
+int main()
+{
+    char str[]="Ram";
+    int len=0;
+    while(str[len]!='\0')
+        len++;
+    printf("Length of string= %d",len);
+    return 0;
+}
+
+
+//string Copy without using string functions
+#include<stdio.h>
+int main()
+{
+    char str[]="Ram",str1[20];
+    int i=0;
+
+    while(str[i]!='\0')
+    {
+        str1[i]=str[i];
+        i++;
+    }
+    str1[i]='\0';
+    printf("Str1=%s",str1);
+    return 0;
+}
+

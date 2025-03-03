@@ -1,0 +1,155 @@
+//function add without return type and without argument
+#include<stdio.h>
+void add()
+{
+    int a,b,c;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    c=a+b;
+    printf("C=%d",c);
+}
+int main()
+{
+    add();
+    return 0;
+}
+
+
+//function add without return type and without argument
+#include<stdio.h>
+void add();       //function prototype
+int main()
+{
+    add();
+    return 0;
+}
+void add()
+{
+    int a,b,c;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    c=a+b;
+    printf("C=%d",c);
+}
+
+
+//add function with argument and without return type
+#include<stdio.h>
+void add(int x,int y)
+{
+    int c;
+    c=x+y;
+    printf("C=%d",c);
+}
+int main()
+{
+    int a,b;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    add(a,b);
+    return 0;
+}
+
+
+//add function with argument and with return type
+#include<stdio.h>
+int add(int a,int b)
+{
+    int c;
+    c=a+b;
+    return c;
+}
+float div(int a,int b)
+{
+    float c;
+    c=(float)a/b;
+    return c;
+}
+int main()
+{
+    int a,b,c;
+    float d;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    c=add(a,b);
+    printf("c=%d\n",c);
+    d=div(a,b);
+    printf("d=%f",d);
+    return 0;
+}
+
+
+//add function with argument and with return type
+#include<stdio.h>
+int add(int,int);         //function prototype
+float div(int,int);
+int main()
+{
+    int a,b,c;
+    float d;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    c=add(a,b);
+    printf("c=%d\n",c);
+    d=div(a,b);
+    printf("d=%f",d);
+    return 0;
+}
+int add(int a,int b)
+{
+    int c;
+    c=a+b;
+    return c;
+}
+float div(int a,int b)
+{
+    float c;
+    c=(float)a/b;
+    return c;
+}
+
+
+
+//swap() using passing by value
+#include<stdio.h>
+void swap(int a, int b)
+{
+    int temp;
+    temp=a;
+    a=b;
+    b=temp;
+}
+int main()
+{
+    int a,b;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    printf("Before swapping a=%d\t b=%d\n",a,b);
+    swap(a,b);
+    printf("After swapping a=%d\t b=%d\n",a,b);
+    return 0;
+}
+
+
+
+//swap() using passing by reference
+#include<stdio.h>
+void swap(int *a, int *b)
+{
+    int temp;
+    temp=*a;
+    *a=*b;
+    *b=temp;
+}
+int main()
+{
+    int a,b;
+    printf("Enter the value of a and b");
+    scanf("%d%d",&a,&b);
+    printf("Before swapping a=%d\t b=%d\n",a,b);
+    swap(&a,&b);
+    printf("After swapping a=%d\t b=%d\n",a,b);
+    return 0;
+}
+
+

@@ -1,0 +1,72 @@
+//Defining and assigning address to pointer
+#include<stdio.h>
+int main()
+{
+    int a,*ptr;
+
+    ptr=&a;
+
+    *ptr=10;
+    printf("Value of a=%d\tAddress of a=%u\n",a,&a);
+    printf("Value of a=%d\tAddress of a=%u\n",*ptr,ptr);
+    return 0;
+}
+
+
+//Expression evaluation using pointer
+#include<stdio.h>
+int main()
+{
+    int a=10,b=15,c,*p,*q;
+    float d=11.8,e=76.33,f,*r,*s;
+
+    p=&a;
+    q=&b;
+    r=&d;
+    s=&e;
+
+    c= *p + *q;
+    f= *r + *s;
+
+    printf("Sumi=%d\nSumf=%f",c,f);
+
+    return 0;
+}
+
+
+//WAP to input two integers in main()
+//Function Calculate()  should compute sum and product
+//main() should print the sum and product.
+#include<stdio.h>
+void calculate(int a,int b,int *p,int *q)
+{
+    *p= a+b;
+    *q= a*b;
+}
+int main()
+{
+    int a,b,sum,product;
+    printf("Enter the value of a and b\n");
+    scanf("%d%d",&a,&b);
+    calculate(a,b,&sum,&product);
+    printf("Sum=%d\nProduct=%d",sum,product);
+    return 0;
+}
+
+
+
+//Array and pointers
+#include<stdio.h>
+int main()
+{
+    int a[]={1,3,5,7,9},*ptr;
+    int i;
+    ptr=a;            //ptr points to a
+
+    for(i=0;i<5;i++)
+    {
+        printf("%d\n",*ptr);
+        ptr++;
+    }
+    return 0;
+}
